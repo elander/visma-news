@@ -7,6 +7,7 @@ import { TopNewsComponent } from './top-news/top-news.component';
 import { TechNewsComponent } from './tech-news/tech-news.component';
 import { ScienceNewsComponent } from './science-news/science-news.component';
 import { EntertainmentNewsComponent } from './entertainment-news/entertainment-news.component';
+import { UnversalNewsComponent } from './unversal-news/unversal-news.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EntertainmentNewsComponent } from './entertainment-news/entertainment-n
     TopNewsComponent,
     TechNewsComponent,
     ScienceNewsComponent,
-    EntertainmentNewsComponent
+    EntertainmentNewsComponent,
+    UnversalNewsComponent
   ],
   imports: [
     BrowserModule,

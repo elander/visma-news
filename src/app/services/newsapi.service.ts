@@ -10,13 +10,13 @@ export class NewsapiService {
   constructor(private _http: HttpClient) { }
 
   //technology
-  techNews='https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=93db02f9184b418b957e511a5733c46a';
+  techNews='https://newsapi.org/v2/top-headlines?country=us&apiKey=93db02f9184b418b957e511a5733c46a&category=technology';
   //top
   topNews='https://newsapi.org/v2/top-headlines?country=us&apiKey=93db02f9184b418b957e511a5733c46a';
   //science
-  scienceNews='https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=93db02f9184b418b957e511a5733c46a';
+  scienceNews='https://newsapi.org/v2/top-headlines?country=us&apiKey=93db02f9184b418b957e511a5733c46a&category=science';
   //entertainment
-  entertainmentNews='https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=93db02f9184b418b957e511a5733c46a';
+  entertainmentNews='https://newsapi.org/v2/top-headlines?country=us&apiKey=93db02f9184b418b957e511a5733c46a&category=entertainment';
 
   topHeadLines(): Observable<any>{
     return this._http.get(this.topNews);
@@ -34,7 +34,10 @@ export class NewsapiService {
     return this._http.get(this.entertainmentNews);
   }
   
-  
+  categoryHeadLines(category: string): Observable<any> {
+    const url = this.topNews.concat(`&category=${category}`);
+    return this._http.get(url);
+  }
   
 
 }

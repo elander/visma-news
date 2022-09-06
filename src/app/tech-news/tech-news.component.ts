@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { NewsapiService } from '../services/newsapi.service';
+
 @Component({
   selector: 'app-tech-news',
   templateUrl: './tech-news.component.html',
@@ -13,8 +14,7 @@ export class TechNewsComponent implements OnInit {
   headlinesData: any[] = [];
 
   ngOnInit(): void {
-    this.api.techHeadLines().subscribe(result => {
-      // console.log(result);
+    this.api.categoryHeadLines('technology').subscribe(result => {
       this.headlinesData = result.articles;
     });
   }
