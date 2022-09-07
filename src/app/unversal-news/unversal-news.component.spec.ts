@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UnversalNewsComponent } from './unversal-news.component';
 
-describe('UnversalNewsComponent', () => {
+xdescribe('UnversalNewsComponent', () => {
   let component: UnversalNewsComponent;
   let fixture: ComponentFixture<UnversalNewsComponent>;
 
